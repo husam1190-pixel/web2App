@@ -1,0 +1,13 @@
+{
+  "name": "web2app-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web2App website-to-Android APK builder MVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
