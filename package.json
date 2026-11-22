@@ -5,7 +5,8 @@
   "description": "Web2App website-to-Android APK builder MVP",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check public/dashboard.js"
   },
   "dependencies": {
     "express": "^4.21.2"
