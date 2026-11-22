@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#155cc5">
+<title>Web2App — حوّل موقعك إلى تطبيق</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="logo">▣</span><span>Web2App</span></div><a class="tag" href="/dashboard.html" style="text-decoration:none">لوحة التحكم</a></header>
+<main>
+<section class="hero">
+  <div class="eyebrow">منصتك لبناء التطبيقات</div>
+  <h1>موقعك الإلكتروني،<br><span>تطبيقك الخاص.</span></h1>
+  <p>أدخل رابط موقعك، اختر اسم التطبيق، ثم أنشئ ملف APK لتثبيته على أجهزة Android.</p>
+</section>
+<section class="panel">
+  <div class="panel-head"><div><h2>أنشئ تطبيقك</h2><p>املأ البيانات التالية للبدء</p></div><span class="step">01 / 03</span></div>
+  <form id="buildForm">
+    <label for="url">رابط الموقع الإلكتروني</label>
+    <input id="url" name="url" type="url" placeholder="https://www.example.com" required>
+    <label for="appName">اسم التطبيق</label>
+    <input id="appName" name="appName" maxlength="35" placeholder="مثال: متجري" required>
+    <label for="browserMode">طريقة فتح الموقع داخل التطبيق</label>
+    <select id="browserMode" name="browserMode">
+      <option value="WEBVIEW">WebView — تجربة تطبيق داخلية</option>
+      <option value="CUSTOM_TAB">Custom Tabs — أفضل لتسجيل الدخول عبر Google ومزودي الهوية</option>
+    </select>
+    <small>ملاحظة: وضع Custom Tabs يستخدم جلسة المتصفح لتدفقات تسجيل الدخول. أما WebView فقد يحتاج تكاملاً خاصاً من الموقع لتمرير جلسة OAuth إليه.</small>
+    <label for="packageName">معرّف التطبيق (Package ID)</label>
+    <input id="packageName" name="packageName" value="com.example.myapp" required>
+    <small>استخدم حروفاً إنجليزية صغيرة ونقاطاً، مثل com.company.store</small>
+    <button id="submit" type="submit"><span>إنشاء ملف APK</span><b>←</b></button>
+    <div id="status" role="status" aria-live="polite"></div>
+  </form>
+</section>
+<section class="features">
+  <article><i>↗</i><h3>بسيط وسريع</h3><p>حوّل رابط موقعك إلى مشروع Android.</p></article>
+  <article><i>⌘</i><h3>تطبيق مستقل</h3><p>يفتح الموقع داخل واجهة تطبيق WebView.</p></article>
+  <article><i>⌂</i><h3>جاهز للتطوير</h3><p>أضف الأيقونات والحسابات والباقات لاحقاً.</p></article>
+</section>
+<footer>Web2App © 2026 — النسخة التجريبية 0.1</footer>
+</main>
+<script src="/app.js"></script>
+</body></html>
