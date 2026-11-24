@@ -3,43 +3,62 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#155cc5">
-<title>Web2App — حوّل موقعك إلى تطبيق</title>
+<meta name="description" content="حوّل موقعك إلى تطبيق Android بسهولة. Turn your website into an Android app with Web2App.">
+<title>Web2App — حوّل موقعك إلى تطبيق Android</title>
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="top"><div class="brand"><span class="logo">▣</span><span>Web2App</span></div><a class="tag" href="/dashboard.html" style="text-decoration:none">لوحة التحكم</a></header>
+<header class="top">
+  <a class="brand" href="/" aria-label="Web2App"><span class="logo">▣</span><span>Web2App</span></a>
+  <nav class="nav"><a href="#how" data-i18n="navHow">كيف يعمل</a><a href="#features" data-i18n="navFeatures">المميزات</a><a href="#builder" data-i18n="navBuilder">إنشاء تطبيق</a></nav>
+  <button class="lang-switch" id="languageToggle" type="button" aria-label="Switch language">English</button>
+</header>
 <main>
 <section class="hero">
-  <div class="eyebrow">منصتك لبناء التطبيقات</div>
-  <h1>موقعك الإلكتروني،<br><span>تطبيقك الخاص.</span></h1>
-  <p>أدخل رابط موقعك، اختر اسم التطبيق، ثم أنشئ ملف APK لتثبيته على أجهزة Android.</p>
+  <div class="eyebrow" data-i18n="eyebrow">من موقعك إلى تطبيق Android</div>
+  <h1 data-i18n="headline">موقعك الإلكتروني،<br><span>تطبيقك الخاص.</span></h1>
+  <p data-i18n="subhead">حوّل موقعك المتوافق مع HTTPS إلى تطبيق Android قابل للتثبيت، بخطوات بسيطة ومن دون البدء من الصفر.</p>
+  <a class="primary-link" href="#builder" data-i18n="heroCta">ابدأ بتحويل موقعك <b>←</b></a>
+  <div class="trust-note" data-i18n="betaNote">نسخة تجريبية — إنشاء APK يحتاج إلى خادم بناء مجهّز.</div>
 </section>
-<section class="panel">
-  <div class="panel-head"><div><h2>أنشئ تطبيقك</h2><p>املأ البيانات التالية للبدء</p></div><span class="step">01 / 03</span></div>
+<section class="how" id="how">
+  <div class="section-heading"><div class="eyebrow" data-i18n="howEyebrow">ثلاث خطوات بسيطة</div><h2 data-i18n="howTitle">من الرابط إلى التطبيق</h2></div>
+  <div class="steps">
+    <article><span>01</span><h3 data-i18n="step1Title">أدخل رابط موقعك</h3><p data-i18n="step1Text">استخدم رابط HTTPS لموقعك الحالي.</p></article>
+    <article><span>02</span><h3 data-i18n="step2Title">خصّص التطبيق</h3><p data-i18n="step2Text">اختر الاسم ومعرّف الحزمة وطريقة العرض.</p></article>
+    <article><span>03</span><h3 data-i18n="step3Title">أنشئ ملف APK</h3><p data-i18n="step3Text">نزّل نسخة Android التجريبية بعد اكتمال البناء.</p></article>
+  </div>
+</section>
+<section class="features" id="features">
+  <div class="section-heading"><div class="eyebrow" data-i18n="featuresEyebrow">مصمم للأفراد والشركات</div><h2 data-i18n="featuresTitle">ابدأ من موقعك الحالي</h2></div>
+  <div class="feature-grid">
+    <article><i>↗</i><h3 data-i18n="feature1Title">بدون إعادة بناء الموقع</h3><p data-i18n="feature1Text">استخدم موقعك الحالي كنقطة بداية لتطبيق Android.</p></article>
+    <article><i>⌘</i><h3 data-i18n="feature2Title">خيارات عرض مرنة</h3><p data-i18n="feature2Text">اختر WebView أو Custom Tabs حسب احتياج موقعك.</p></article>
+    <article><i>◎</i><h3 data-i18n="feature3Title">واجهة بلغتين</h3><p data-i18n="feature3Text">واجهة عربية وإنجليزية للعملاء من مختلف البلدان.</p></article>
+  </div>
+</section>
+<section class="panel" id="builder">
+  <div class="panel-head"><div><h2 data-i18n="formTitle">أنشئ تطبيقك</h2><p data-i18n="formIntro">أدخل بيانات موقعك للبدء</p></div><span class="step">01 / 03</span></div>
   <form id="buildForm">
-    <label for="url">رابط الموقع الإلكتروني</label>
+    <label for="url" data-i18n="urlLabel">رابط الموقع الإلكتروني</label>
     <input id="url" name="url" type="url" placeholder="https://www.example.com" required>
-    <label for="appName">اسم التطبيق</label>
+    <label for="appName" data-i18n="appNameLabel">اسم التطبيق</label>
     <input id="appName" name="appName" maxlength="35" placeholder="مثال: متجري" required>
-    <label for="browserMode">طريقة فتح الموقع داخل التطبيق</label>
+    <label for="browserMode" data-i18n="modeLabel">طريقة فتح الموقع داخل التطبيق</label>
     <select id="browserMode" name="browserMode">
-      <option value="WEBVIEW">WebView — تجربة تطبيق داخلية</option>
-      <option value="CUSTOM_TAB">Custom Tabs — أفضل لتسجيل الدخول عبر Google ومزودي الهوية</option>
+      <option value="WEBVIEW" data-i18n="webviewOption">WebView — تجربة داخل التطبيق</option>
+      <option value="CUSTOM_TAB" data-i18n="tabsOption">Custom Tabs — جلسة المتصفح</option>
     </select>
-    <small>ملاحظة: وضع Custom Tabs يستخدم جلسة المتصفح لتدفقات تسجيل الدخول. أما WebView فقد يحتاج تكاملاً خاصاً من الموقع لتمرير جلسة OAuth إليه.</small>
-    <label for="packageName">معرّف التطبيق (Package ID)</label>
+    <small data-i18n="modeHelp">قد تحتاج بعض المواقع إلى إعدادات خاصة لتسجيل الدخول أو عرض المحتوى داخل التطبيق.</small>
+    <label for="packageName" data-i18n="packageLabel">معرّف التطبيق (Package ID)</label>
     <input id="packageName" name="packageName" value="com.example.myapp" required>
-    <small>استخدم حروفاً إنجليزية صغيرة ونقاطاً، مثل com.company.store</small>
-    <button id="submit" type="submit"><span>إنشاء ملف APK</span><b>←</b></button>
+    <small data-i18n="packageHelp">استخدم حروفاً إنجليزية صغيرة ونقاطاً، مثل com.company.store</small>
+    <button id="submit" type="submit"><span data-i18n="submit">إنشاء ملف APK</span><b>←</b></button>
     <div id="status" role="status" aria-live="polite"></div>
   </form>
 </section>
-<section class="features">
-  <article><i>↗</i><h3>بسيط وسريع</h3><p>حوّل رابط موقعك إلى مشروع Android.</p></article>
-  <article><i>⌘</i><h3>تطبيق مستقل</h3><p>يفتح الموقع داخل واجهة تطبيق WebView.</p></article>
-  <article><i>⌂</i><h3>جاهز للتطوير</h3><p>أضف الأيقونات والحسابات والباقات لاحقاً.</p></article>
-</section>
-<footer>Web2App © 2026 — النسخة التجريبية 0.1</footer>
+<div class="disclaimer" data-i18n="disclaimer">مهم: هذه نسخة تجريبية. ملفات APK الناتجة حالياً مخصصة للاختبار وليست جاهزة للنشر التجاري أو Google Play.</div>
+<footer>Web2App © 2026 — <span data-i18n="footer">نسخة تجريبية</span></footer>
 </main>
 <script src="/app.js"></script>
 </body></html>
